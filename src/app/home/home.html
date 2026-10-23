@@ -1,0 +1,12 @@
+<div>
+  <h2>Liste des Objectifs</h2>
+  <ul>
+    @for (obj of activiteService.objectifs; track obj) {
+      <li>
+        <a [routerLink]="['/consultAct', $index]">
+          {{ obj }}
+        </a>
+      </li>
+    }
+  </ul>
+</div>

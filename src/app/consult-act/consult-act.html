@@ -1,0 +1,17 @@
+<div>
+  <h2>Detail de l'activité:</h2>
+
+  @if (!isEditing) {
+    <p>Nom de l'activité: <strong>{{ activiteTexte }}</strong></p>
+    <button (click)="supprimeElem()">Supprimer</button>
+    <button (click)="activerModeEdition()">Modifier</button>
+    <button (click)="retour()">Retour</button>
+  } @else {
+    <p>
+      Nom de l'activité: 
+      <input type="text" [(ngModel)]="activiteTexte">
+    </p>
+    <button (click)="supprimeElem()">Supprimer</button>
+    <button (click)="sauvegarder()">Sauvegarder</button>
+  }
+</div>
